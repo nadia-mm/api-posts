@@ -6,11 +6,25 @@ I tested MongoDB and Express with JavaScript.
 
 ## Running app
 
-Please create an env file for the following variables: MONGO_URI and PORT.
+Please create an env file for the following variables: MONGO_URI and PORT before running the app in the terminal.
+
+If you run  with node:
 
 ```shell
+git clone https://github.com/nadia-mm/api-posts.git
+cd api-posts
 npm run dev
 ```
+
+
+If you run with docker:
+
+```shell
+git clone https://github.com/nadia-mm/api-posts.git
+cd api-posts
+docker-compose up -d
+```
+
 
 ## Create post
 
