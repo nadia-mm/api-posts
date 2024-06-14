@@ -4,12 +4,14 @@ const app = express();
 const mongoose = require("mongoose");
 const router = express.Router();
 const postRoutes = require("./src/routes/posts")(router);
+const setupSwaggerDocs = require("./swaggerConfig");
 
 const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
 
 app.use("/api/v1/posts", postRoutes);
+setupSwaggerDocs(app, PORT);
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);

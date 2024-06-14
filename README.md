@@ -1,8 +1,13 @@
 ### API for posting comments
 
-I tested MongoDB and Express with JavaScript. 
+I tested MongoDB, Docker and Express with JavaScript. 
 
-***Note: You must change the ID in the example when updating, getting or removing post.***
+
+## Pre-installations
+
+Please create an .env in the root directory file with the following two environment variables
+- MONGO_URI = mongodb+srv://<username>:<password>@<mongo_database_uri>/<database_name>
+- PORT = 5000
 
 ## Running app
 
@@ -15,6 +20,7 @@ git clone https://github.com/nadia-mm/api-posts.git
 cd api-posts
 npm run dev
 ```
+**Note: You must change the post ID in the examples when updating, getting or removing post. You will get all the API documentation on http://localhost:{PORT}/api-docs**
 
 
 If you run with docker:
@@ -24,7 +30,7 @@ git clone https://github.com/nadia-mm/api-posts.git
 cd api-posts
 docker-compose up -d
 ```
-
+**Note: You will get all the API documentation on http://localhost:8080 with Docker**
 
 ## Create post
 
