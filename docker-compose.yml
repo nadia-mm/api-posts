@@ -8,8 +8,10 @@ services:
     environment:
       - MONGO_URI=${MONGO_URI}
       - PORT=${PORT}
+    depends_on:
+      - mongo
 
   mongo:
-    image: mongo:latest
+    image: mongo:6.0.2
     ports:
       - '27017:27017'
