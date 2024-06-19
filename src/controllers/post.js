@@ -48,7 +48,7 @@ const updatePost = async (req, res) => {
 
 const deletePost = async (req, res) => {
   try {
-    const post = await Post.findOneAndDelete({ _id: req.params.id }, req.body);
+    const post = await Post.findOneAndDelete({ _id: req.params.id });
     res.send("Post succesfully removed");
   } catch (e) {
     console.log(e);
